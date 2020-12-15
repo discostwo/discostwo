@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 
 function search_producto() {
-    window.location.href = "busqueda.php?text=" + $("#idbusqueda").val();
+    window.location.href = "pagina/busqueda/busqueda.php?text=" + $("#idbusqueda").val();
 
 }
 

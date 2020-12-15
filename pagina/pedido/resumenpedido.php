@@ -1,19 +1,19 @@
 <?php
 session_start();
 if (!isset($_SESSION['NombreCliente'])) {
-    header('location: index.php');
+    header('location: ../../index.php');
 }
 ?>
 
 <head>
     <title>Disco's Two</title>
-    <link rel="shortcut icon" href="assets/DISCOSTWOs.png" />
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <link rel="shortcut icon" href="../../assets/DISCOSTWOs.png" />
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/index-cabecera.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index-cabecera.css">
 
 </head>
 
@@ -32,12 +32,12 @@ if (!isset($_SESSION['NombreCliente'])) {
                 echo "<script type='text/javascript'>alert('$msg');</script>";
             };
 
-            require 'servicios/_conexion.php';
+            require '../../servicios/_conexion.php';
             $cliente = $_SESSION['IDCliente'];
             $sql = "SELECT * FROM pedido ped
             INNER JOIN articulo art
             ON ped.idArticulo=art.idArticulo WHERE (Estado = ? AND IDCliente=?)";
-           
+
 
             $resultado = $conexion->prepare($sql);
             $varestado1 = 1;
@@ -54,7 +54,7 @@ if (!isset($_SESSION['NombreCliente'])) {
             while ($registro = mysqli_fetch_array($result1)) {
                 echo '<div class="item-pedido">';
                 echo '<div class="pedido-img">';
-                echo '<img src="assets/products/' . $registro["Imagen"] . '">';
+                echo '<img src="../../assets/products/' . $registro["Imagen"] . '">';
                 echo '</div>';
                 echo '<div class="pedido-detalle">';
                 echo '<h3>' . $registro["NombreArticulo"] . '</h3>';
@@ -70,6 +70,7 @@ if (!isset($_SESSION['NombreCliente'])) {
             <a href="pedidocompleto.php"><button>Vale</button></a>
         </div>
     </div>
-  
+
 </body>
+
 </html>

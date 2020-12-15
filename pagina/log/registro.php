@@ -35,15 +35,15 @@ if ($formulario) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="assets/DISCOSTWOs.png" />
+  <link rel="icon" type="image/png" href="../../assets/DISCOSTWOs.png" />
 
 
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="../../css/registro.css">
 
   </head>
 
   <div align=center><a href="index.php">
-      <img src="assets/DISCOSTWOletra.png" class="imglogo" alt="Volver a inicio" />
+      <img src="../../assets/DISCOSTWOletra.png" class="imglogo" alt="Volver a inicio" />
     </a></div>
 
   <body>

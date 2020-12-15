@@ -1,5 +1,5 @@
 <?php
-require './servicios/_conexion.php';
+require '../../servicios/_conexion.php';
 
 $DNI = utf8_decode($_POST['DNI']);
 $Email = utf8_decode($_POST['email']);
@@ -145,7 +145,7 @@ echo "<script>
 //FUNCION PARA ALERT
 function alert($msg)
 {
-	echo "<script src='js/main-script.js'></script>
+	echo "<script src='../../js/main-script.js'></script>
 	<script type='text/javascript'>alert('$msg');</script>";
 }
 

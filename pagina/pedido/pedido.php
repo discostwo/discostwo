@@ -4,7 +4,7 @@ if (!isset($_SESSION['NombreCliente'])) {
 
 	echo "<script>
 		alert('Para poder ir a tu pedido, debes estar loggeado');
-					window.location= 'index.php' 
+					window.location= '../../index.php' 
 					</script>";
 }
 ?>
@@ -16,14 +16,14 @@ if (!isset($_SESSION['NombreCliente'])) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
 
 
-	<link rel="shortcut icon" href="assets/DISCOSTWOs.png" />
+	<link rel="shortcut icon" href="../../assets/DISCOSTWOs.png" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/index-cabecera.css">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/index-cabecera.css">
 
 </head>
 
@@ -46,7 +46,7 @@ if (!isset($_SESSION['NombreCliente'])) {
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$.ajax({
-				url: 'servicios/pedido/get_procesados.php',
+				url: '../../servicios/pedido/get_procesados.php',
 				type: 'POST',
 				data: {},
 				success: function(data) {
@@ -57,7 +57,7 @@ if (!isset($_SESSION['NombreCliente'])) {
 						html +=
 							'<div class="item-pedido">' +
 							'<div class="pedido-img">' +
-							'<a href="producto.php?p=' + data.datos[i].IDArticulo + '"><img src="assets/products/' + data.datos[i].Imagen + '"></a>' +
+							'<a href="../../producto.php?p=' + data.datos[i].IDArticulo + '"><img src="../../assets/products/' + data.datos[i].Imagen + '"></a>' +
 							'</div>' +
 							'<div class="pedido-detalle">' +
 							'<h3>' + data.datos[i].NombreArticulo + '</h3>' +
@@ -71,7 +71,7 @@ if (!isset($_SESSION['NombreCliente'])) {
 						if (html != "") {
 							document.getElementById("procesarcompra").disabled = false;
 						}
-						
+
 					}
 
 					//document.getElementById("montototal").innerHTML=monto;
@@ -85,7 +85,7 @@ if (!isset($_SESSION['NombreCliente'])) {
 
 		function borrarpedido(idPedido) {
 			$.ajax({
-				url: 'servicios/pedido/borrarpedido.php',
+				url: '../../servicios/pedido/borrarpedido.php',
 				type: 'POST',
 				data: {
 					idPedido: idPedido
@@ -127,7 +127,7 @@ if (!isset($_SESSION['NombreCliente'])) {
 
 function alert($msg)
 {
-	echo "<script src='js/main-script.js'></script>
+	echo "<script src='../../js/main-script.js'></script>
 	<script type='text/javascript'>alert('$msg');</script>";
 }
 ?>

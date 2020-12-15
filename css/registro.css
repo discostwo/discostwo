@@ -152,6 +152,27 @@
     display: -ms-flexbox; 
     }
 
+    .logoutbotons {
+      width: 20%;
+      justify-content: center;
+      background: #701ca8;
+      border: solid;
+      padding: 12px;
+      color: white;
+      border-radius: 10px;
+      border-color: white;
+    
+      font-family: Poppins-Regular, sans-serif;
+      margin-top: -60px;
+      margin-left: -1300px;
+      font-size: 16px;
+  
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox; 
+      }
+
 
   .atrasbotons {
     width: 20%;

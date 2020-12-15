@@ -122,7 +122,7 @@ session_start();
             });
         }
         function open_login(){
-            window.location.href="login.php";
+            window.location.href="/pagina/log/login.php";
         }
     </script>
 </body>

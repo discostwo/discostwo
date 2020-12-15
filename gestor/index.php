@@ -1,3 +1,20 @@
+<?php
+session_start();
+if (!isset($_SESSION['Adminuser'])) {
+
+	echo "<script>
+		alert('Para acceder, debes estar loggeado como admin');
+					window.location= '../pagina/log/login-admin.php' 
+					</script>";
+}
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +40,7 @@
                     </br>
                 </div>
 
-
+                <button onclick="location.href='../servicios/logout.php'"; style="cursor:pointer;" class="logoutbotons">LOGOUT</button>
                 <button onclick="location.href='http://discostwo.local/gestor/articulos/gestionararticulos.php'" ; style="cursor:pointer;" class="atrasbotons">Gestionar ARTICULOS</button>
                 <button onclick="location.href='http://discostwo.local/gestor/clientes/gestionarclientes.php'" ; style="cursor:pointer;" class="aatrasbotons">Gestionar CLIENTES</button>
             </center>

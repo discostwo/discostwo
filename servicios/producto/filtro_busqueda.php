@@ -74,7 +74,7 @@ if ($total_row > 0) {
    <div class="product-box">' .
             '<a href="producto.php?p=' . $row['IDArticulo'] . '">' .
             '<div class="product">' .
-            '<img src="assets/products/' . $row['Imagen'] . '">' .
+            '<img src="../../assets/products/' . $row['Imagen'] . '">' .
             '<div class="detail-title">' . $row['NombreArticulo'] . '</div>' .
             '<div class="detail-description">' . $row['Artista'] . '</div>' .
             '<div class="detail-description">' . $row['Tipo'] . '</div>' .

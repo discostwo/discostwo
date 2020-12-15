@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -6,23 +12,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="assets/DISCOSTWOs.png" />
+	<link rel="icon" type="image/png" href="../../assets/DISCOSTWOs.png" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/animate/animate.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/css-hamburgers/hamburgers.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/login-admin.css">
+	<link rel="stylesheet" type="text/css" href="../../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../../css/login-admin.css">
 	<!--===============================================================================================-->
 
 </head>
@@ -39,11 +45,11 @@
 			<div class="wrap-login100">
 				<div>
 					<a href="index.php">
-						<img src="assets/DISCOSTWOfull.png" alt="IMG" class="login100-picimg"> </a>
+						<img src="../../assets/DISCOSTWOfull.png" alt="IMG" class="login100-picimg"> </a>
 
 				</div>
 
-				<form class="login100-form validate-form" action="servicios/loginadmin_sql.php" method="POST">
+				<form class="login100-form validate-form" action="../../servicios/loginadmin_sql.php" method="POST">
 
 					<span class="login100-form-title">
 						Inicia sesión (ADMIN)
@@ -105,30 +111,30 @@
 
 
 	<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../vendor/bootstrap/js/popper.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<script src="../../vendor/select2/select2.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="../../vendor/tilt/tilt.jquery.min.js"></script>
 	<script>
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/main-script.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+	<script type="text/javascript" src="../../js/main-script.js"></script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
 
 
 	<script type="text/javascript">
 	function registro(){
     $.ajax({
-        url:'servicios/compra/registrocompleto.php',
+        url:'../../servicios/compra/registrocompleto.php',
         type:'POST',
         data:{
           email:email,

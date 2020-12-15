@@ -8,22 +8,22 @@ session_start();
 <head>
     <title>Disco's Two</title>
 
-    <link rel="shortcut icon" href="assets/DISCOSTWOs.png" />
+    <link rel="shortcut icon" href="../../assets/DISCOSTWOs.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="css/jquery-ui.css" rel="stylesheet">
-    <script type="text/javascript" src="js/main-script.js"></script>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link href="../../css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="../../js/main-script.js"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/index-cabecera.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/index-cabecera.css">
+    <link href="../../css/style.css" rel="stylesheet">
 
 
 
@@ -56,7 +56,7 @@ session_start();
                     <h3>Tipo</h3>
                     <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
                         <?php
-                        include('servicios/_conexion.php');
+                        include('../../servicios/_conexion.php');
                                 ///////////
                                 $query = $conexion->prepare("SELECT DISTINCT(Tipo) FROM articulo WHERE Stock >=? ORDER BY IDArticulo DESC");
                                 $varstock = "1";
@@ -89,7 +89,7 @@ session_start();
     <style>
         #loading {
             text-align: center;
-            background: url('assets/loader.gif') no-repeat center;
+            background: url('../../assets/loader.gif') no-repeat center;
             height: 150px;
         }
     </style>
@@ -111,7 +111,7 @@ session_start();
                 var Tipo = get_filter('Tipo');
 
                 $.ajax({
-                    url: "servicios/producto/filtro_busqueda.php",
+                    url: "../../servicios/producto/filtro_busqueda.php",
                     method: "POST",
                     data: {
 

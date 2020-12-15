@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require 'servicios/_conexion.php';
+require '../../servicios/_conexion.php';
 $cliente = $_SESSION['IDCliente'];
 
 $sql = "UPDATE pedido SET Estado = ? WHERE (Estado = ? AND IDCliente=?)";

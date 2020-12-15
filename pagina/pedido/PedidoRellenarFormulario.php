@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'servicios/_conexion.php';
+require '../../servicios/_conexion.php';
 
 $Direccion = utf8_decode($_POST['direccion']);
 $cliente=$_SESSION['IDCliente'];

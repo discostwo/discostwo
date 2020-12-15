@@ -1,3 +1,18 @@
+<?php
+session_start();
+if (!isset($_SESSION['Adminuser'])) {
+
+	echo "<script>
+		alert('Para acceder, debes estar loggeado como admin');
+					window.location= '../../pagina/log/login-admin.php' 
+					</script>";
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 

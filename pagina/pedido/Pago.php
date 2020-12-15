@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['NombreCliente'])) {
-    header('location: index.php');
+    header('location: ../../index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -9,14 +9,14 @@ if (!isset($_SESSION['NombreCliente'])) {
 
 <head>
     <title>Disco's Two</title>
-    <link rel="shortcut icon" href="assets/DISCOSTWOs.png" />
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <link rel="shortcut icon" href="../../assets/DISCOSTWOs.png" />
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/index-cabecera.css">
-    <link rel="stylesheet" type="text/css" href="css/registropedidopago.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index-cabecera.css">
+    <link rel="stylesheet" type="text/css" href="../../css/registropedidopago.css">
 
 </head>
 
@@ -32,7 +32,7 @@ if (!isset($_SESSION['NombreCliente'])) {
 
                 <div>
                     <?php
-                    require 'servicios/_conexion.php';
+                    require '../../servicios/_conexion.php';
                     $cliente = $_SESSION['IDCliente'];
                     $sql = "SELECT * FROM pedido ped
             INNER JOIN articulo art
@@ -78,8 +78,8 @@ if (!isset($_SESSION['NombreCliente'])) {
                     }
 
                     //Llamadas de retorno
-                    echo '<input type="hidden" name="return" value="http://discostwo.local/PagoExito.php">';
-                    echo '<input type="hidden" name="cancel_return" value="http://discostwo.local/Pago.php">';
+                    echo '<input type="hidden" name="return" value="http://discostwo.local/pagina/pedido/PagoExito.php">';
+                    echo '<input type="hidden" name="cancel_return" value="http://discostwo.local/pagina/pedido/Pago.php">';
                     //Ni idea, tengo que buscarlo
                     echo '<input type="hidden" name="no_note" value="1">';
                     echo '<input type="hidden" name="currency_code" value="EUR">';
@@ -104,13 +104,12 @@ if (!isset($_SESSION['NombreCliente'])) {
             </section>
         </div>
         <center><?php
-           
-        ?>
-        <a href="PedidoRellenar.php"><button  class="atrasbotons">Atrás</button></center></a>
+
+                ?>
+            <a href="PedidoRellenar.php"><button class="atrasbotons">Atrás</button></center></a>
     </div>
-           
-            
+
+
 </body>
 
 </html>
-

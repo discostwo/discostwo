@@ -1,3 +1,19 @@
+<?php
+session_start();
+if (!isset($_SESSION['Adminuser'])) {
+
+	echo "<script>
+		alert('Para acceder, debes estar loggeado como admin');
+					window.location= '../../pagina/log/login-admin.php' 
+					</script>";
+}
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -20,12 +36,13 @@
     echo "<a href='../index.php'><button class='aaaaboton'>Volver</button></a>";
     echo "<div>";
     echo "<center><h1>CLIENTES</h1>";
-    echo "<center><table border=2><tr><th>IDCliente</th> <th>DNI</th><th>NombreCliente</th><th>Apellidos</th><th>Telefono</th><th>Ciudad</th><th>Direccion</th></tr>";
+    echo "<center><table border=2><tr><th>IDCliente</th> <th>DNI</th><th>Email</th><th>NombreCliente</th><th>Apellidos</th><th>Telefono</th><th>Ciudad</th><th>Direccion</th></tr>";
 
     while ($registro = $resultado->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $registro['IDCliente'] . "</td>";
         echo "<td>" . $registro['DNI'] . "</td>";
+        echo "<td>" . $registro['Email'] . "</td>";
         echo "<td>" . $registro['NombreCliente'] . "</td>";
         echo "<td>" . $registro['Apellidos'] . "</td>";
         echo "<td>" . $registro['Telefono'] . "</td>";
